@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>VUE</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+    <header class="bg-success text-center text-white">
+        <span class="h2">VUE</span>
+    </header>
+
+    <section class="container-fluid text-center" id="contenedor">
+        <div id="app" class="container py-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" v-for="mueble in muebles" :key="mueble.id">
+                    <div class="card h-100">
+                        <img :src="mueble.image" class="card-img-top" alt="Imagen del mueble">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ mueble.name }}</h5>
+                            <p class="card-price">{{ (mueble.price / 100).toFixed(2) }}</p>
+                            <p class="card-category">Categoría: {{ mueble.category }}</p>
+                            <p class="card-quantity">Cantidad disponible: {{ mueble.stock }}</p>
+                            <p>Colores:</p>
+                            <div>
+                                <span v-for="color in mueble.colors" :style="{ backgroundColor: color }" class="color-circle" :key="color"></span>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn btn-primary">Ver más...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center text-white">
+        <span class="h2">Frameworks</span>
+    </footer>
+
+    <script src="js/vue3.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/funciones2.js"></script>
+</body>
+</html>
+
+

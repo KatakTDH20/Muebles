@@ -1,0 +1,51 @@
+section {
+    background-color: #ffc188;
+    padding: 20px 0;
+}
+
+span{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+img{
+    height: 300px !important;
+}
+
+.card{
+    margin-left: 6%;
+}
+
+.color-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+  
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+.card-price {
+    color: green;
+    font-weight: bold;
+}
+  
+.card-category {
+    font-style: italic;
+    color: #777;
+}
+  
+.card-quantity {
+    font-size: 0.9rem;
+    color: #555;
+}
+  
